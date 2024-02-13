@@ -32,7 +32,7 @@
 
         <!-- Submit Button -->
         <div class="mt-4">
-            <button type="submit" class="btn btn-primary w-full text-lg">Daftar</button>
+            <button type="submit" class="btn btn-primary w-full text-lg">Masuk</button>
             <p class="text-center">Belum Memiliki Akun Masjid ? <a href="{{route('register')}}" class=" text-primary">Daftar</a></p>
         </div>
     </form>
