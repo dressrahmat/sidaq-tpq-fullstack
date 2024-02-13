@@ -12,10 +12,24 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                display: ['Lora'],
             },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, require("daisyui")],
+
+    daisyui: {
+        themes: [
+            {
+                mytheme: {
+                "primary": "#66BF60",
+                "secondary": "#2FBFE7",
+                "accent": "#CD76E9",
+                "neutral": "#211C6A",
+                "base-100": "#FEFBF6",
+                },
+            },
+        ],
+    },
 };
