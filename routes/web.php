@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Dashboard\Pusat\RoleController;
 use App\Http\Controllers\Dashboard\Pusat\MasjidController;
 use App\Http\Controllers\Dashboard\Pusat\DashboardController;
 
@@ -29,6 +30,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::middleware('role:superadmin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('masjid', MasjidController::class);
+        Route::resource('role', RoleController::class);
     });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -1,8 +1,10 @@
-<div :class="{'w-32': !isOpen, 'w-64': isOpen}" class="bg-gradient-to-r from-green-500 to-blue-500 text-white shadow z-30 transition-width duration-300 pt-20 fixed inset-y-0">
+<div :class="{'w-32': !isOpen, 'w-64': isOpen}"
+    class="bg-gradient-to-r from-green-500 to-blue-500 text-white shadow z-30 transition-width duration-300 pt-20 fixed inset-y-0">
     <!-- Sidebar Content -->
     <ul class="menu border-t-2 mt-4">
         <li class="py-2 text-lg bg-transparent">
-            <a href="{{ route('dashboard') }}" class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('dashboard') ? 'bg-gray-700' : '' }}">
+            <a href="{{ route('dashboard') }}"
+                class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('dashboard') ? 'bg-gray-700' : '' }}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -12,13 +14,15 @@
             </a>
         </li>
         <li class="py-2 text-lg bg-transparent">
-            <a href="{{ route('masjid.index') }}" class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('masjid.*') ? 'bg-gray-700' : '' }}">
+            <a href="{{ route('masjid.index') }}"
+                class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('masjid.*') ? 'bg-gray-700' : '' }}">
                 <i class="fa fa-solid fa-mosque"></i>
                 <span class="ml-2" x-show="isOpen">Masjid</span>
             </a>
         </li>
         <li class="py-2 text-lg bg-transparent">
-            <a href="{{ route('masjid.create') }}" class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('masjid.create') ? 'bg-gray-700' : '' }}">
+            <a href="{{ route('masjid.create') }}"
+                class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('masjid.create') ? 'bg-gray-700' : '' }}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -26,6 +30,28 @@
                 </svg>
                 <span class="ml-2" x-show="isOpen">Tambah Masjid</span>
             </a>
+        </li>
+        <li class="py-2 text-lg bg-transparent">
+            <details open class="border-t-2 mt-4">
+                <summary class="bg-transparent">
+                    <i class="fa fa-solid fa-toolbox"></i>
+                    <span class="ml-2" x-show="isOpen">Setting</span>
+                </summary>
+                <ul>
+                    <li><a href="{{ route('role.index') }}"
+                            class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('role.*') ? 'bg-gray-700' : '' }}">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="ml-2" x-show="isOpen">Role</span>
+                        </a>
+                    </li>
+                    <li><a href="#"
+                        class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('#') ? 'bg-gray-700' : '' }}">
+                        <i class="fas fa-user"></i>
+                        <span class="ml-2" x-show="isOpen">User</span>
+                    </a>
+                </li>
+                </ul>
+            </details>
         </li>
     </ul>
 </div>
