@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
-    Route::middleware('role:pusat')->group(function () {
+    Route::middleware('role:superadmin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('masjid', MasjidController::class);
     });

@@ -11,20 +11,22 @@
             <div class="mt-4">
                 <img src="{{ $masjid->photo_profile->url }}" alt="Gambar Masjid" class="rounded-lg w-full">
             </div>
-        @else
+            @else
             <div class="mt-1 h-1/2">
-                <img src="https://source.unsplash.com/featured/?mosque" alt="Gambar Masjid" class="rounded-lg w-full h-full">
+                <img src="https://source.unsplash.com/featured/?mosque" alt="Gambar Masjid"
+                    class="rounded-lg w-full h-full">
             </div>
-    @endif
+            @endif
             <div class="space-y-2">
                 <p class=" text-md"><span class="font-semibold">Nama Masjid:</span> {{ $masjid->name }}</p>
                 <p class=" text-md"><span class="font-semibold">Jumlah Ustadz:</span> {{ $jmlUstadz }}</p>
                 <p class=" text-md"><span class="font-semibold">Jumlah Santri:</span> {{ $jmlSantri }}</p>
             </div>
-        </div>        
+        </div>
     </div>
     <div>
-        <livewire:masjid-show :id="$masjid->id" />
+        <livewire:ustadz.index :id="$masjid->id" />
+        <livewire:santri.index :id="$masjid->id" />
     </div>
 </div>
 @endsection

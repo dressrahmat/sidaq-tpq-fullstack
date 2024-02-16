@@ -1,23 +1,33 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Masjid;
 
 use App\Models\User;
 use App\Models\Masjid;
 use Livewire\Component;
+use Livewire\WithPagination;
 
-class MasjidIndex extends Component
+class Index extends Component
 {
-    public $data;
+    use WithPagination;
 
-    public function mount()
-    {
-        $this->data = Masjid::get();
-    }
+    public $id;
+    public $search = '';
+
+    protected $listeners = ['refreshSearch'];
 
     public function render()
     {
-        return view('livewire.masjid-index');
+        $data = Masjid::whereHas('user.roles', function($query) {
+            $query->where('name', 'admin');
+        })->where('nama_masjid', 'like', '%' . $this->search . '%')->paginate(5);
+
+        return view('livewire.masjid.index', compact('data'));
+    }
+
+    public function refreshSearch()
+    {
+        $this->resetPage();
     }
 
     public function show($id)

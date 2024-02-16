@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Profile;
-use App\Models\User;
 use Carbon\Carbon;
+use App\Models\User;
+use App\Models\Masjid;
+use App\Models\Profile;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 
 class UserRoleSeeder extends Seeder
@@ -25,22 +26,26 @@ class UserRoleSeeder extends Seeder
 
         DB::beginTransaction();
         try {
-            Role::create(['name' => 'pusat']);
-            Role::create(['name' => 'masjid']);
+            $masjid = Masjid::create([
+                'nama_masjid' => 'Masjid Ismuhu Yahya',
+            ]);
+            Role::create(['name' => 'superadmin']);
+            Role::create(['name' => 'admin']);
             Role::create(['name' => 'ustadz']);
             Role::create(['name' => 'santri']);
 
             $pusat = User::create(array_merge([
                 'name' => 'Pusat',
                 'email' => 'pusat@gmail.com',
+                'id_masjid' => $masjid->id,
             ], $default_user_value));
 
-            $pusat->assignRole('pusat');
+            $pusat->assignRole('superadmin');
             Profile::create([
                 'id_user' => $pusat->id,
                 'alamat' => 'Jalan Jalan',
-                'kota' => 'Bandung',
-                'provinsi' => 'Jawa Barat',
+                'kota' => 'Pontianak',
+                'provinsi' => 'Kalimantan Barat',
                 'tanggal_lahir' => Carbon::now(),
                 'amanah' => 'Pusat Kaderisasi',
             ]);

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Dashboard\Pusat;
 
 use App\Models\User;
+use App\Models\Masjid;
+use App\Helpers\Helper;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,8 +19,7 @@ class MasjidController extends Controller
      */
     public function index()
     {
-        $data = User::role('masjid')->get();
-        return view('pusat.masjid.index', compact('data'));
+        return view('pusat.masjid.index');
     }
 
     /**
@@ -26,7 +27,7 @@ class MasjidController extends Controller
      */
     public function create()
     {
-        //
+        return view('pusat.masjid.create');
     }
 
     /**
@@ -92,23 +93,23 @@ class MasjidController extends Controller
      */
     public function show(string $id)
     {
-        $masjid = User::role('masjid')->with('profile')->find($id);
+        // $masjid = User::role('masjid')->with('profile')->find($id);
 
-        $jmlUstadz = User::whereHas('profile', function (Builder $query) use ($id) {
-            $query->where('id_khidmat', $id);
-        })->count();
+        // $jmlUstadz = User::whereHas('profile', function (Builder $query) use ($id) {
+        //     $query->where('id_khidmat', $id);
+        // })->count();
 
-        // Mendapatkan id_user dari ustadz
-        $ustadzIds = User::whereHas('profile', function (Builder $query) use ($id) {
-            $query->where('id_khidmat', $id);
-        })->pluck('id')->all();
+        // // Mendapatkan id_user dari ustadz
+        // $ustadzIds = User::whereHas('profile', function (Builder $query) use ($id) {
+        //     $query->where('id_khidmat', $id);
+        // })->pluck('id')->all();
 
-        // Menghitung jumlah santri yang dimiliki oleh ustadz-ustadz tersebut
-        $jmlSantri = User::whereHas('profile', function (Builder $query) use ($ustadzIds) {
-            $query->whereIn('id_khidmat', $ustadzIds);
-        })->count();
+        // // Menghitung jumlah santri yang dimiliki oleh ustadz-ustadz tersebut
+        // $jmlSantri = User::whereHas('profile', function (Builder $query) use ($ustadzIds) {
+        //     $query->whereIn('id_khidmat', $ustadzIds);
+        // })->count();
 
-        return view('pusat.masjid.show', compact(['masjid', 'jmlUstadz', 'jmlSantri']));
+        // return view('pusat.masjid.show', compact(['masjid', 'jmlUstadz', 'jmlSantri']));
     }
 
     /**
@@ -116,7 +117,7 @@ class MasjidController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('pusat.masjid.edit', compact('id'));
     }
 
     /**

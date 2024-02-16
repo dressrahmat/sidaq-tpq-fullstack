@@ -49,11 +49,12 @@
         </main>
 
         <!-- Footer -->
-        <footer class="mt-auto text-center text-gray-500 text-sm">
+        <footer class="mt-auto text-center text-slate-800 text-base w-full bg-slate-200 py-5">
             &copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
         </footer>
     </div>
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>

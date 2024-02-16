@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Profile extends Model
 {
@@ -26,7 +27,7 @@ class Profile extends Model
     /**
      * Get the khidmat that owns the Profile
      */
-    public function tempat_khidmat(): BelongsTo
+    public function khidmat(): BelongsTo
     {
         return $this->belongsTo(User::class, 'id_khidmat', 'id');
     }

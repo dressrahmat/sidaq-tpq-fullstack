@@ -8,6 +8,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -24,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'id_masjid',
     ];
 
     /**
@@ -55,9 +57,21 @@ class User extends Authenticatable
     }
 
     /**
-     * Get all of the khidmat for the User
+     * Get the masjid that owns the User
+     *
+     * @return BelongsTo
      */
-    public function khidmat(): HasMany
+    public function masjid(): BelongsTo
+    {
+        return $this->belongsTo(Masjid::class, 'id_masjid', 'id');
+    }
+
+    /**
+     * Get all of the santri for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function santri(): HasMany
     {
         return $this->hasMany(Profile::class, 'id_khidmat', 'id');
     }

@@ -21,13 +21,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_1 = User::create([
                 'name' => 'Ustadz Amin',
                 'email' => 'amin@gmail',
+                'id_masjid' => 2,
                 'email_verified_at' => now(),
                 'password' => bcrypt(4444),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_1->id,
-                'id_khidmat' => 2,
                 'alamat' => 'Jl. Kretek No. 7',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -41,13 +41,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_2 = User::create([
                 'name' => 'Ustadz Budi',
                 'email' => 'budi@gmail',
+                'id_masjid' => 2,
                 'email_verified_at' => now(),
                 'password' => bcrypt(5555),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_2->id,
-                'id_khidmat' => 2,
                 'alamat' => 'Jl. Manggis No. 12',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -60,14 +60,14 @@ class UstadzSeeder extends Seeder
             // Dummy Data 2
             $mpp_ustadz_3 = User::create([
                 'name' => 'Ustadz Candra',
-                'email' => 'candra@gmail',
+                'email' => 'candra,@gmail',
+                'id_masjid' => 3,
                 'email_verified_at' => now(),
                 'password' => bcrypt(6666),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_3->id,
-                'id_khidmat' => 3,
                 'alamat' => 'Jl. Merpati No. 5',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -81,13 +81,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_4 = User::create([
                 'name' => 'Ustadz Dian',
                 'email' => 'dian@gmail',
+                'id_masjid' => 3,
                 'email_verified_at' => now(),
                 'password' => bcrypt(7777),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_4->id,
-                'id_khidmat' => 3,
                 'alamat' => 'Jl. Puspa No. 9',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -101,13 +101,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_5 = User::create([
                 'name' => 'Ustadz Eka',
                 'email' => 'eka@gmail',
+                'id_masjid' => 4,
                 'email_verified_at' => now(),
                 'password' => bcrypt(8888),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_5->id,
-                'id_khidmat' => 4,
                 'alamat' => 'Jl. Anggrek No. 3',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -121,13 +121,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_6 = User::create([
                 'name' => 'Ustadz Faisal',
                 'email' => 'faisal@gmail',
+                'id_masjid' => 4,
                 'email_verified_at' => now(),
                 'password' => bcrypt(9999),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_6->id,
-                'id_khidmat' => 4,
                 'alamat' => 'Jl. Mawar No. 15',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -141,13 +141,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_7 = User::create([
                 'name' => 'Ustadz Gita',
                 'email' => 'gita@gmail',
+                'id_masjid' => 5,
                 'email_verified_at' => now(),
                 'password' => bcrypt(1111),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_7->id,
-                'id_khidmat' => 5,
                 'alamat' => 'Jl. Cempaka No. 21',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -161,13 +161,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_8 = User::create([
                 'name' => 'Ustadz Hani',
                 'email' => 'hani@gmail',
+                'id_masjid' => 5,
                 'email_verified_at' => now(),
                 'password' => bcrypt(2222),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_8->id,
-                'id_khidmat' => 5,
                 'alamat' => 'Jl. Dahlia No. 18',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -181,13 +181,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_9 = User::create([
                 'name' => 'Ustadz Ira',
                 'email' => 'ira@gmail',
+                'id_masjid' => 6,
                 'email_verified_at' => now(),
                 'password' => bcrypt(3333),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_9->id,
-                'id_khidmat' => 6,
                 'alamat' => 'Jl. Kenanga No. 24',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -201,13 +201,13 @@ class UstadzSeeder extends Seeder
             $mpp_ustadz_10 = User::create([
                 'name' => 'Ustadz Joko',
                 'email' => 'joko@gmail',
+                'id_masjid' => 6,
                 'email_verified_at' => now(),
                 'password' => bcrypt(4444),
             ]);
 
             Profile::create([
                 'id_user' => $mpp_ustadz_10->id,
-                'id_khidmat' => 6,
                 'alamat' => 'Jl. Melati No. 30',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',

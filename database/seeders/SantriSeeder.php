@@ -21,6 +21,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 1
             $mpp_santri_1 = User::create([
                 'name' => 'Yusuf',
+                'id_masjid' => 1,
                 'email' => 'yusuf@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4444),
@@ -41,6 +42,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 2
             $mpp_santri_2 = User::create([
                 'name' => 'Ali',
+                'id_masjid' => 1,
                 'email' => 'ali@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(5555),
@@ -61,6 +63,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 3
             $mpp_santri_3 = User::create([
                 'name' => 'Bambang',
+                'id_masjid' => 1,
                 'email' => 'bambang@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(6666),
@@ -81,6 +84,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 4
             $mpp_santri_4 = User::create([
                 'name' => 'Citra',
+                'id_masjid' => 1,
                 'email' => 'citra@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(7777),
@@ -101,6 +105,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 5
             $mpp_santri_5 = User::create([
                 'name' => 'Diana',
+                'id_masjid' => 1,
                 'email' => 'diana@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(8888),
@@ -121,6 +126,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 6
             $mpp_santri_6 = User::create([
                 'name' => 'Rizky',
+                'id_masjid' => 1,
                 'email' => 'rizky@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(9999),
@@ -141,6 +147,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 7
             $mpp_santri_7 = User::create([
                 'name' => 'Dina',
+                'id_masjid' => 1,
                 'email' => 'dina@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1010),
@@ -161,6 +168,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 8
             $mpp_santri_8 = User::create([
                 'name' => 'Aisyah',
+                'id_masjid' => 1,
                 'email' => 'aisyah@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1111),
@@ -181,6 +189,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 9
             $mpp_santri_9 = User::create([
                 'name' => 'Rina',
+                'id_masjid' => 1,
                 'email' => 'rina@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1212),
@@ -201,6 +210,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 10
             $mpp_santri_10 = User::create([
                 'name' => 'Dewi',
+                'id_masjid' => 1,
                 'email' => 'dewi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1313),
@@ -221,6 +231,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 11
             $mpp_santri_11 = User::create([
                 'name' => 'Iwan',
+                'id_masjid' => 2,
                 'email' => 'iwan@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1414),
@@ -228,7 +239,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_11->id,
-                'id_khidmat' => 9,
+                'id_khidmat' => 10,
                 'alamat' => 'Jl. Kenari No. 24',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -241,6 +252,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 12
             $mpp_santri_12 = User::create([
                 'name' => 'Siti',
+                'id_masjid' => 2,
                 'email' => 'siti@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1515),
@@ -248,7 +260,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_12->id,
-                'id_khidmat' => 9,
+                'id_khidmat' => 10,
                 'alamat' => 'Jl. Melati No. 30',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -261,6 +273,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 13
             $mpp_santri_13 = User::create([
                 'name' => 'Bella',
+                'id_masjid' => 2,
                 'email' => 'bella@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1616),
@@ -268,7 +281,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_13->id,
-                'id_khidmat' => 9,
+                'id_khidmat' => 10,
                 'alamat' => 'Jl. Kenanga No. 18',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -281,6 +294,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 14
             $mpp_santri_14 = User::create([
                 'name' => 'Rifqi',
+                'id_masjid' => 2,
                 'email' => 'rifqi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1717),
@@ -288,7 +302,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_14->id,
-                'id_khidmat' => 9,
+                'id_khidmat' => 10,
                 'alamat' => 'Jl. Mawar No. 25',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -301,6 +315,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 15
             $mpp_santri_15 = User::create([
                 'name' => 'Rino',
+                'id_masjid' => 2,
                 'email' => 'rino@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1818),
@@ -308,7 +323,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_15->id,
-                'id_khidmat' => 9,
+                'id_khidmat' => 10,
                 'alamat' => 'Jl. Anggrek No. 8',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -321,6 +336,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 16
             $mpp_santri_16 = User::create([
                 'name' => 'Rizki',
+                'id_masjid' => 2,
                 'email' => 'rizki@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(1919),
@@ -341,6 +357,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 17
             $mpp_santri_17 = User::create([
                 'name' => 'Aisya',
+                'id_masjid' => 2,
                 'email' => 'aisya@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2020),
@@ -348,7 +365,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_17->id,
-                'id_khidmat' => 10,
+                'id_khidmat' => 11,
                 'alamat' => 'Jl. Cempaka No. 15',
                 'kota' => 'Yogyakarta',
                 'provinsi' => 'D.I Yogyakarta',
@@ -361,6 +378,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 18
             $mpp_santri_18 = User::create([
                 'name' => 'Fajar',
+                'id_masjid' => 2,
                 'email' => 'fajar@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2121),
@@ -368,7 +386,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_18->id,
-                'id_khidmat' => 10,
+                'id_khidmat' => 11,
                 'alamat' => 'Jl. Dahlia No. 18',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -381,6 +399,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 19
             $mpp_santri_19 = User::create([
                 'name' => 'Lia',
+                'id_masjid' => 2,
                 'email' => 'lia@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2222),
@@ -388,7 +407,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_19->id,
-                'id_khidmat' => 10,
+                'id_khidmat' => 11,
                 'alamat' => 'Jl. Mawar No. 7',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -401,6 +420,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 20
             $mpp_santri_20 = User::create([
                 'name' => 'Andi',
+                'id_masjid' => 2,
                 'email' => 'andi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2323),
@@ -408,7 +428,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_20->id,
-                'id_khidmat' => 10,
+                'id_khidmat' => 11,
                 'alamat' => 'Jl. Kenari No. 24',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -421,6 +441,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 21
             $mpp_santri_21 = User::create([
                 'name' => 'Ani',
+                'id_masjid' => 2,
                 'email' => 'ani@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2424),
@@ -441,6 +462,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 22
             $mpp_santri_22 = User::create([
                 'name' => 'Zain',
+                'id_masjid' => 3,
                 'email' => 'zain@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3131),
@@ -461,6 +483,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 23
             $mpp_santri_23 = User::create([
                 'name' => 'Ahmad',
+                'id_masjid' => 3,
                 'email' => 'ahmad@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(2929),
@@ -468,7 +491,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_23->id,
-                'id_khidmat' => 11,
+                'id_khidmat' => 12,
                 'alamat' => 'Jl. Bougenville No. 42',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -481,6 +504,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 24
             $mpp_santri_24 = User::create([
                 'name' => 'Sofia',
+                'id_masjid' => 3,
                 'email' => 'sofia@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3030),
@@ -488,7 +512,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_24->id,
-                'id_khidmat' => 11,
+                'id_khidmat' => 12,
                 'alamat' => 'Jl. Anggrek No. 45',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -501,6 +525,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 25
             $mpp_santri_25 = User::create([
                 'name' => 'Firdaus',
+                'id_masjid' => 3,
                 'email' => 'firdaus@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3131),
@@ -508,7 +533,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_25->id,
-                'id_khidmat' => 11,
+                'id_khidmat' => 12,
                 'alamat' => 'Jl. Melor No. 48',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -521,6 +546,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 26
             $mpp_santri_26 = User::create([
                 'name' => 'Ratna',
+                'id_masjid' => 3,
                 'email' => 'ratna@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3232),
@@ -541,6 +567,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 27
             $mpp_santri_27 = User::create([
                 'name' => 'Ika',
+                'id_masjid' => 3,
                 'email' => 'ika@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3333),
@@ -561,6 +588,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 28
             $mpp_santri_28 = User::create([
                 'name' => 'Imran',
+                'id_masjid' => 3,
                 'email' => 'imran@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3434),
@@ -581,6 +609,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 29
             $mpp_santri_29 = User::create([
                 'name' => 'Nina',
+                'id_masjid' => 3,
                 'email' => 'nina@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3535),
@@ -588,7 +617,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_29->id,
-                'id_khidmat' => 12,
+                'id_khidmat' => 13,
                 'alamat' => 'Jl. Kenanga No. 30',
                 'kota' => 'Sleman',
                 'provinsi' => 'D.I Yogyakarta',
@@ -601,6 +630,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 30
             $mpp_santri_30 = User::create([
                 'name' => 'Rendra',
+                'id_masjid' => 3,
                 'email' => 'rendra@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3636),
@@ -608,7 +638,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_30->id,
-                'id_khidmat' => 12,
+                'id_khidmat' => 13,
                 'alamat' => 'Jl. Kamboja No. 33',
                 'kota' => 'Yogyakarta',
                 'provinsi' => 'D.I Yogyakarta',
@@ -621,6 +651,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 31
             $mpp_santri_31 = User::create([
                 'name' => 'Fandi',
+                'id_masjid' => 4,
                 'email' => 'fandi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3131),
@@ -641,6 +672,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 32
             $mpp_santri_32 = User::create([
                 'name' => 'Linda',
+                'id_masjid' => 4,
                 'email' => 'linda@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3232),
@@ -661,6 +693,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 33
             $mpp_santri_33 = User::create([
                 'name' => 'Rudi',
+                'id_masjid' => 4,
                 'email' => 'rudi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3333),
@@ -681,6 +714,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 34
             $mpp_santri_334 = User::create([
                 'name' => 'Tari',
+                'id_masjid' => 4,
                 'email' => 'tari@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3434),
@@ -701,6 +735,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 35
             $mpp_santri_35 = User::create([
                 'name' => 'Budi',
+                'id_masjid' => 4,
                 'email' => 'budi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3535),
@@ -708,7 +743,7 @@ class SantriSeeder extends Seeder
 
             Profile::create([
                 'id_user' => $mpp_santri_35->id,
-                'id_khidmat' => 13,
+                'id_khidmat' => 14,
                 'alamat' => 'Jl. Teratai No. 18',
                 'kota' => 'Bantul',
                 'provinsi' => 'D.I Yogyakarta',
@@ -721,6 +756,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 36
             $mpp_santri_36 = User::create([
                 'name' => 'Rine',
+                'id_masjid' => 4,
                 'email' => 'rine@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3636),
@@ -741,6 +777,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 37
             $mpp_santri_37 = User::create([
                 'name' => 'Fitri',
+                'id_masjid' => 4,
                 'email' => 'fitri@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3737),
@@ -761,6 +798,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 38
             $mpp_santri_38 = User::create([
                 'name' => 'Rini',
+                'id_masjid' => 4,
                 'email' => 'rini2@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3838),
@@ -781,6 +819,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 39
             $mpp_santri_39 = User::create([
                 'name' => 'Arif',
+                'id_masjid' => 4,
                 'email' => 'arif@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(3939),
@@ -801,6 +840,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 40
             $mpp_santri_40 = User::create([
                 'name' => 'Lina',
+                'id_masjid' => 4,
                 'email' => 'lina@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4040),
@@ -821,6 +861,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 41
             $mpp_santri_41 = User::create([
                 'name' => 'Bayu',
+                'id_masjid' => 5,
                 'email' => 'bayu@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4141),
@@ -841,6 +882,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 42
             $mpp_santri_42 = User::create([
                 'name' => 'Dina',
+                'id_masjid' => 5,
                 'email' => 'dina2@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4242),
@@ -861,6 +903,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 43
             $mpp_santri_43 = User::create([
                 'name' => 'Eva',
+                'id_masjid' => 5,
                 'email' => 'eva@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4343),
@@ -881,6 +924,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 44
             $mpp_santri_44 = User::create([
                 'name' => 'Rian',
+                'id_masjid' => 5,
                 'email' => 'rian@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4444),
@@ -901,6 +945,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 45
             $mpp_santri_45 = User::create([
                 'name' => 'Liana',
+                'id_masjid' => 5,
                 'email' => 'liana@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4545),
@@ -921,6 +966,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 46
             $mpp_santri_46 = User::create([
                 'name' => 'Indra',
+                'id_masjid' => 5,
                 'email' => 'indra@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4646),
@@ -941,6 +987,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 47
             $mpp_santri_47 = User::create([
                 'name' => 'Fendi',
+                'id_masjid' => 5,
                 'email' => 'fendi@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4747),
@@ -961,6 +1008,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 48
             $mpp_santri_48 = User::create([
                 'name' => 'Ninda',
+                'id_masjid' => 5,
                 'email' => 'ninda@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4848),
@@ -981,6 +1029,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 49
             $mpp_santri_49 = User::create([
                 'name' => 'Ruli',
+                'id_masjid' => 5,
                 'email' => 'ruli@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(4949),
@@ -1001,6 +1050,7 @@ class SantriSeeder extends Seeder
             // Dummy Data 50
             $mpp_santri_50 = User::create([
                 'name' => 'Sari',
+                'id_masjid' => 5,
                 'email' => 'sari@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt(5050),
