@@ -72,14 +72,4 @@
             @endif
         </div>
     </div>
-    <!-- Modal -->
-    {{-- <dialog id="my_modal_1" class="modal" x-show="open" @close="open = false">
-        <div class="modal-box">
-            <h3 class="font-bold text-lg">Modal Title</h3>
-            <p class="py-4">Role ID: <span x-text="roleId"></span></p>
-            <div class="modal-action">
-                <button @click="open = false" class="btn">Close</button>
-            </div>
-        </div>
-    </dialog> --}}
 </div>

@@ -44,8 +44,8 @@
                             <span class="ml-2" x-show="isOpen">Role</span>
                         </a>
                     </li>
-                    <li><a href="#"
-                        class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('#') ? 'bg-gray-700' : '' }}">
+                    <li><a href="{{route('user.index')}}"
+                        class="flex items-center px-4 py-2 text-gray-200 {{ request()->routeIs('user.index') ? 'bg-gray-700' : '' }}">
                         <i class="fas fa-user"></i>
                         <span class="ml-2" x-show="isOpen">User</span>
                     </a>
